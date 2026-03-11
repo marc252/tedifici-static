@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import TeamsProvider from "../components/TeamsProvider";
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -26,7 +27,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossOrigin="anonymous" />
       </head>
       <body className="antialiased min-h-screen bg-slate-950">
-        {children}
+        <TeamsProvider>{children}</TeamsProvider>
       </body>
     </html>
   );
